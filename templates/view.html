@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ดูคำถาม</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Itim', cursive;
+                margin-top: 135px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FDEFD5;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #DA542A;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #DA542A;
+            color: #FDEFD5;
+        }
+
+        .image-container {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .btn-menu {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn-edit {
+            background-color: #DA542A;
+            color: #FDEFD5;
+        }
+
+        .btn-edit:hover {
+            background-color: #C6412D;
+        }
+
+        .btn-remove {
+            background-color: #E74C3C;
+            color: #FDEFD5;
+        }
+
+        .btn-remove:hover {
+            background-color: #C0392B;
+        }
+
+        .btn-menu {
+            color: #DA542A;
+        }
+
+        .btn-menu:hover {
+            color: #C6412D;
+        }
+
+        .navbar-main {
+            background-color: #DA542A;
+            width: 100%;
+            height: 115px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .navbar-text {
+            color: #FDEFD5;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Itim', cursive;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .navbar-logo-img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 20px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-main">
+        <a href="/teacher_dashboard" class="navbar-logo">
+            <img src="/static/pic/mini_logo.png" alt="Logo" class="navbar-logo-img">
+        </a>
+        <div class="navbar-links">
+            <a href="/" class="navbar-text">กลับไปยังหน้าหลัก</a>
+            <a href="about_us" class="navbar-text">เกี่ยวกับเรา</a>
+            <a href="contact_page" class="navbar-text">ติดต่อ/แจ้งปัญหา</a>
+            <a href="logout" class="navbar-text">ออกจากระบบ</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>แสดงคำถาม</h1>
+
+        <form method="post" action="/view">
+            <label for="lesson_select">เลือกบทเรียน:</label>
+            <select id="lesson_select" name="lesson_select">
+                <option value="1" selected>บทที่ 1</option>
+                <option value="2">บทที่ 2</option>
+                <option value="3">บทที่ 3</option>
+                <option value="4">บทที่ 4</option>
+                <option value="5">บทที่ 5</option>
+                <option value="6">บทที่ 6</option>
+                <option value="7">บทที่ 7</option>
+                <option value="8">บทที่ 8</option>
+                <option value="9">บทที่ 9</option>
+                <option value="10">บทที่ 10</option>
+                <option value="11">บทที่ 11</option>
+                <option value="12">บทที่ 12</option>
+
+
+
+            </select>
+            <button type="submit">แสดงคำถาม</button>
+        </form>
+        <a href="/add_question" class="btn-menu">เพิ่มบททดสอบ</a>
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>คำถาม</th>
+                    <th>รูปภาพ</th>
+                    <th>บทที่</th>
+                    <th>การดำเนินการ</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for question in questions %}
+                <tr>
+                    <td>{{ question.id }}</td>
+                    <td>{{ question.question }}</td>
+                    <td>
+                        {% if question.image %}
+                        <div class="image-container">
+                            <img src="/static/{{ question.image }}" alt="รูปภาพคำถาม">
+                        </div>
+                        {% else %}
+                        ไม่มีรูปภาพ
+                        {% endif %}
+                    </td>
+                    <td>{{ question.lesson }}</td>
+                    <td>
+                        <a href="/edit/{{ question.id }}" class="btn btn-edit">แก้ไข</a>
+                        <a href="/delete/{{ question.id }}" class="btn btn-remove">ลบ</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

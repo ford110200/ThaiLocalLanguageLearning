@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+    /* Styles for the navigation bars */
+    .navbar-main {
+      background-color: #DA542A;
+      width: 100%;
+      height: 115px;
+      display: flex;
+      justify-content: span-between;
+      align-items: center;
+      padding: 0 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+  .navbar-text {
+    color: #FDEFD5;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+  }
+
+    /* Styles for the content */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .heading {
+      color: #2D69A8;
+      font-family: 'Itim', cursive;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 52px */
+      margin-bottom: 20px;
+    }
+
+    .example-text {
+      color: #2D69A8;
+      font-family: 'Itim', cursive;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 31.2px */
+    }
+
+    .bottom-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      gap: 40px; /* เพิ่มการระยะห่างระหว่างการ์ด */
+      width: 100%; /* กำหนดความกว้างเต็มจอ */
+      padding: 0 20px; /* เพิ่มการระยะห่างซ้ายขวา */
+    }
+    .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* ปรับระยะห่างระหว่างการ์ด */
+  }
+
+    .bottom-section-button {
+      width: 300px; /* ปรับความกว้างให้เหมาะสม */
+      height: 300px; /* ปรับความสูงให้เหมาะสม */
+      border-radius: 20px;
+      background: var(--background, rgba(236, 236, 236, 0.65));
+      box-shadow: 0px 4px 4px 0px rgba(180, 172, 172, 0.20);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 0;
+    }
+
+
+    .bottom-section-button:hover {
+      background-color: #DA542A;
+    }
+
+    .bottom-section-button:focus {
+      outline: none;
+    }
+
+    .bottom-section-button-label {
+      color: #2D69A8;
+      font-family: 'Itim', cursive;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 31.2px */
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .bottom-section-description {
+      color: #2D69A8;
+      font-family: 'Itim', cursive;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 31.2px */
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 767px) {
+      .navbar-main {
+        height: 80px;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .navbar-text {
+        margin-right: 10px;
+      }
+
+      .container {
+        margin-top: 80px;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .navbar-main {
+        height: 100px;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .navbar-text {
+        margin-right: 15px;
+      }
+
+      .container {
+        margin-top: 100px;
+      }
+    }
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+  .navbar-logo-img {
+    width: 200px; /* Adjust width as needed */
+    height: auto;
+    margin-right: 20px; /* Add some spacing between logo and links */
+  }
+  .navbar-links {
+    display: flex;
+    gap: 20px; /* Add gap between links */
+    margin-left:auto
+  }
+  </style>
+</head>
+<body>
+  <div class="navbar-main">
+    <a href="/" class="navbar-logo">
+      <img src="/static/pic/mini_logo.png" alt="Logo" class="navbar-logo-img">
+    </a>
+    <div class="navbar-links">
+      <a href="/" class="navbar-text">กลับไปยังหน้าหลัก</a>
+      <a href="about_us" class="navbar-text">เกี่ยวกับเรา</a>
+      <a href="contact_page" class="navbar-text">ติดต่อ/แจ้งปัญหา</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="bottom-section">
+      <div class="card-deck">
+        <div class="card bottom-section-button" onclick="location.href='lesson_select'">
+          <img src="/static/pic/book.png" alt="Book" class="card-img-top" style="width: 150px; height: 150px;">
+          <div class="card-body">
+            <h5 class="card-title bottom-section-button-label">บทเรียน</h5>
+          </div>
+        </div>
+        <div class="card bottom-section-button" onclick="location.href='quiz_select'">
+          <img src="/static/pic/quiz.png" alt="Quiz" class="card-img-top" style="width: 150px; height: 150px;">
+          <div class="card-body">
+            <h5 class="card-title bottom-section-button-label">แบบทดสอบ</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

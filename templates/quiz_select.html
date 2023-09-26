@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Select</title>
+  <style>
+    /* Styles for the navigation bars */
+    @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+      .body {
+            font-family: 'Itim', cursive;
+        }
+     .navbar-main {
+      background-color: #DA542A;
+      width: 100%;
+      height: 115px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .navbar-text {
+      color: #FDEFD5;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Itim', cursive;
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .navbar-logo-img {
+      width: 200px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 20px;
+      margin-left: auto;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 150px;
+    }
+
+    .heading {
+      color: #2D69A8;
+      font-family: 'Itim', cursive;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      margin-bottom: 20px;
+    }
+
+    .example-text {
+      color: #2D69A8;
+      font-family: 'Itim', cursive;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+    }
+
+    .center-buttons {
+      font-family: 'Itim', cursive;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 263px;
+    }
+
+    .center-buttons button {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: var(--background, rgba(236, 236, 236, 0.65));
+      box-shadow: 0px 4px 4px 0px rgba(180, 172, 172, 0.20);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-right: 40px;
+      color: #DA542A;
+      font-size: 18px;
+      border: none;
+      font-family: 'Itim', cursive;
+
+      overflow: hidden;
+    }
+
+    .center-buttons button:hover {
+      background-color: #FDEFD5;
+    }
+
+    .center-buttons button img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .center-buttons button span {
+      margin-top: 10px;
+    }
+
+    .select-lesson {
+      text-align: center;
+      margin-top: 80px;
+      color: #2D69A8;
+      font-family: 'Itim', cursive;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 130%;
+      position: relative;
+      top: -40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin-top: 230px;
+        flex-direction: column-reverse;
+      }
+
+      .center-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        max-width: 768px;
+      }
+
+      .center-buttons button {
+        margin: 10px;
+        pointer-events: none;
+      }
+    }
+
+  </style>
+  <script>
+    function navigateToQuiz(lesson) {
+      window.location.href = `/question/${lesson}`;
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar-main">
+    <a href="/student_dashboard" class="navbar-logo">
+      <img src="/static/pic/mini_logo.png" alt="Logo" class="navbar-logo-img">
+    </a>
+    <div class="navbar-links">
+      <a href="about_us" class="navbar-text">เกี่ยวกับเรา</a>
+      <a href="contact_page" class="navbar-text">ติดต่อ/แจ้งปัญหา</a>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <a class="select-lesson">เลือกบททดสอบ</a>
+    <div class="center-buttons">
+      <button onclick="navigateToQuiz(1)">
+        <img src="static/pic/Lesson1.png" alt="Button 1">
+        <span>บทที่ 1</span>
+      </button>
+      <button onclick="navigateToQuiz(2)">
+        <img src="static/pic/Lesson2.png" alt="Button 2">
+        <span>บทที่ 2</span>
+      </button>
+      <button onclick="navigateToQuiz(3)">
+        <img src="static/pic/Lesson3.png" alt="Button 3">
+        <span>บทที่ 3</span>
+      </button>
+      <button onclick="navigateToQuiz(4)">
+        <img src="static/pic/Lesson4.png" alt="Button 4">
+        <span>บทที่ 4</span>
+      </button>
+      <button onclick="navigateToQuiz(5)">
+        <img src="static/pic/Lesson5.png" alt="Button 5">
+        <span>บทที่ 5</span>
+      </button>
+      <button onclick="navigateToQuiz(6)">
+        <img src="static/pic/Lesson6.png" alt="Button 6">
+        <span>บทที่ 6</span>
+      </button>
+      <button onclick="navigateToQuiz(7)">
+        <img src="static/pic/Lesson7.png" alt="Button 7">
+        <span>บทที่ 7</span>
+      </button>
+      <button onclick="navigateToQuiz(8)">
+        <img src="static/pic/Lesson8.png" alt="Button 8">
+        <span>บทที่ 8</span>
+      </button>
+      <button onclick="navigateToQuiz(9)">
+        <img src="static/pic/Lesson9.png" alt="Button 9">
+        <span>บทที่ 9</span>
+      </button>
+      <button onclick="navigateToQuiz(10)">
+        <img src="static/pic/Lesson10.png" alt="Button 10">
+        <span>บทที่ 10</span>
+      </button>
+      <button onclick="navigateToQuiz(11)">
+        <img src="static/pic/Lesson11.png" alt="Button 11">
+        <span>บทที่ 11</span>
+      </button>
+      <button onclick="navigateToQuiz(12)">
+        <img src="static/pic/Lesson12.png" alt="Button 12">
+        <span>บทที่ 12</span>
+      </button>
+    </div>
+  </div>
+
+
+</body>
+</html>

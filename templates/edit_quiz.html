@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Question</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-container {
+            max-width: 200px;
+            height: auto;
+        }
+        .btn-group {
+            margin-top: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FDEFD5;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="mb-4">แก้ไขคำถาม</h1>
+
+        <form action="/edit/{{ question.id }}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="question">คำถาม</label>
+                <textarea class="form-control" id="question" name="question">{{ question.question }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="lesson">บทที่</label>
+                <select class="form-control" id="lesson" name="lesson">
+                    <option value="">เลือกบทที่...</option>
+                    {% for i in range(1, 13) %}
+                        <option value="{{ i }}" {% if question.lesson == i %} selected {% endif %}>{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="new_image">รูปภาพใหม่</label>
+                <input type="file" class="form-control-file" id="new_image" name="new_image">
+            </div>
+            <div class="form-group">
+                <label>รูปภาพปัจจุบัน</label>
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename=question.image) }}" alt="Current Image" class="img-fluid">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">บันทึกการแก้ไข</button>
+        </form>
+        <a href="/view" class="btn btn-secondary mt-3">กลับไปหน้าแก้ไขบททดสอบ</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

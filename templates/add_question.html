@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Question</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Add the Itim font -->
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Itim', cursive;
+        }
+
+        .framebox {
+            border-radius: 50px;
+            background: rgba(253, 239, 213, 0.85);
+            padding: 20px;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .navbar-main {
+            background-color: #DA542A;
+            width: 100%;
+            height: 115px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .navbar-text {
+            color: #FDEFD5;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Itim', cursive;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .navbar-logo-img {
+            width: 200px; /* Adjust width as needed */
+            height: auto;
+            margin-right: 20px; /* Add some spacing between logo and links */
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 20px; /* Add gap between links */
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar-main">
+    <a href="/teacher_dashboard" class="navbar-logo">
+        <img src="/static/pic/mini_logo.png" alt="Logo" class="navbar-logo-img">
+    </a>
+    <div class="navbar-links">
+        <a href="/" class="navbar-text">กลับไปยังหน้าหลัก</a>
+        <a href="about_us" class="navbar-text">เกี่ยวกับเรา</a>
+        <a href="contact_page" class="navbar-text">ติดต่อ/แจ้งปัญหา</a>
+        <a href="logout" class="navbar-text">ออกจากระบบ</a>
+    </div>
+</div>
+<div class="container" style="margin-top: 150px;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="framebox">
+                <h1>เพิ่มคำถาม</h1>
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="lesson">เนื้อหาของบทเรียนที่:</label>
+                        <select class="form-control" id="lesson" name="lesson" required>
+                            <option value="">เลือกเนื้อหาของบทเรียนที่...</option>
+                            {% for i in range(1, 13) %}
+                                <option value="{{ i }}">{{ i }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="question">คำศัพท์:</label>
+                        <input type="text" id="question" name="question" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">อัปโหลดรูปภาพ:</label>
+                        <input type="file" id="image" name="image" class="form-control-file" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">เพิ่มแบบทดสอบ</button>
+                </form>
+                <div class="success-message" id="success-message" style="display: none;">
+                    คำถามถูกเพิ่มแล้ว
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
