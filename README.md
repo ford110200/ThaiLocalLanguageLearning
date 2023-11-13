@@ -4,7 +4,7 @@ Most of the companies, Microchip Technology Thailand, web application developmen
 The project is a web application for teaching Thai language for tribal people. Its purpose is to Help practice Thai pronunciation For tribes in the northern part of the country Referring to the 12 chapters of the Patee language book, there are two functions for users: student and admin. The method we use to check the accent and correctness of speaking Thai is speech to text, which is Google's API. The main language used on this website is python, with the Flask framework connecting it with the html used to display the UI on the website page.
 The results of the project found that creating a website teaching Thai language for students focused on the system of teachers in the northern region. Example Captain Operations And teaching students to practice reading carefully repeatedly has made students aware Again, read Thai again especially to see. Very good Result. 
 <img width="1066" alt="image" src="https://github.com/ford110200/ThaiLocalLanguageLearning/assets/5719463/12ce70fa-24e9-4556-a3b3-704243cbe46b">
-#Feature of Thai Local Language Leaning Web Application
+# Feature of Thai Local Language Learning Web Application
 Student Section:
 Choose between test or learning mode from the navigation menu.
 Access the lesson selection page.
