@@ -48,3 +48,54 @@ The results of the project found that creating a website teaching Thai language 
 7. Add new users.
 8. Edit existing user profiles.
 9. Check the scores of all students for each lesson.
+
+# General User Guide for tlll.org
+
+Welcome to tlll.org! This guide will help you navigate and utilize the features of the website. The instructions are compatible with all major web browsers.
+
+## Table of Contents
+
+1. [Accessing the Website](#accessing-the-website)
+2. [Choosing Learning Modes](#choosing-learning-modes)
+3. [Navigating the Lesson Selection Page](#navigating-the-lesson-selection-page)
+4. [Interactive Practice System](#interactive-practice-system)
+5. [Engaging with the Testing System](#engaging-with-the-testing-system)
+6. [Exploring the Consolidated Score System](#exploring-the-consolidated-score-system)
+7. [Reviewing Personal Scores](#reviewing-personal-scores)
+
+## 1. Accessing the Website <a name="accessing-the-website"></a>
+
+- Open your preferred web browser.
+- Visit [tlll.org](https://tlll.org).
+
+## 2. Choosing Learning Modes <a name="choosing-learning-modes"></a>
+
+- Select your desired learning mode (test or learning) from the navigation menu.
+
+## 3. Navigating the Lesson Selection Page <a name="navigating-the-lesson-selection-page"></a>
+
+- Navigate to the lesson selection page to access available lessons.
+
+## 4. Interactive Practice System <a name="interactive-practice-system"></a>
+
+- Utilize the interactive practice system to provide spoken responses for effective learning.
+
+## 5. Engaging with the Testing System <a name="engaging-with-the-testing-system"></a>
+
+- Engage with the testing system to assess your knowledge and understanding.
+
+## 6. Exploring the Consolidated Score System <a name="exploring-the-consolidated-score-system"></a>
+
+- Explore the consolidated score system to track your progress.
+
+## 7. Reviewing Personal Scores <a name="reviewing-personal-scores"></a>
+
+- Review your personal scores to monitor your performance.
+
+---
+
+**Note:** For the optimal experience, it is recommended to use a screen size of at least 1920x1080. This guide ensures compatibility with all major web browsers.
+
+Now you're ready to explore and learn on tlll.org! If you have any questions or encounter issues, feel free to reach out for assistance.
+<img width="1120" alt="image" src="https://github.com/ford110200/ThaiLocalLanguageLearning/assets/5719463/5f403e69-a0ea-4eb0-8568-6aa3ec217696">
+
