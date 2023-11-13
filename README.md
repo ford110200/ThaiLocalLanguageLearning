@@ -99,3 +99,11 @@ Welcome to tlll.org! This guide will help you navigate and utilize the features 
 Now you're ready to explore and learn on tlll.org! If you have any questions or encounter issues, feel free to reach out for assistance.
 <img width="1120" alt="image" src="https://github.com/ford110200/ThaiLocalLanguageLearning/assets/5719463/5f403e69-a0ea-4eb0-8568-6aa3ec217696">
 
+# Permissions
+
+This project operates under the licenses of Bangkok University and Microchip Technology (Thailand) Co. Ltd.
+[Tribes_to_thai.pdf](https://github.com/ford110200/ThaiLocalLanguageLearning/files/13330730/Tribes_to_thai.pdf)
+
+
+
+
